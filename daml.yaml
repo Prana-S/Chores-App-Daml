@@ -1,0 +1,34 @@
+sdk-version: 1.18.1
+name: MyBorrowApp
+version: 0.1.0
+source: daml
+init-script: Main:setup
+parties:
+  - Steve
+  - Ethan
+dependencies:
+- daml-prim
+- daml-stdlib
+- daml-trigger
+sandbox-options:
+- --wall-clock-time
+- --ledgerid=MyBorrowApp-sandbox
+start-navigator: true
+codegen:
+  js:
+    output-directory: ui/daml.js
+    npm-scope: daml.js
+
+
+# sdk-version: 1.16.0
+# name: MyBorrowApp
+# source: daml
+# init-script: Main:setup
+# parties:
+# - Jerry
+# - Elaine
+# - Kramer
+# dependencies:
+# - daml-prim
+# - daml-stdlib
+# - daml-trigger
